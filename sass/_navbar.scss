@@ -1,0 +1,141 @@
+.nav {
+    height: 10rem;
+    padding: 0 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 5;
+    
+
+
+        // --------------  CHECKBOX --------------
+
+    &__igation {
+        display: none;
+        
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked + &__label &__label__span {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__label &__label__span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    &__checkbox:checked + &__label &__label__span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    &__label {
+        position: relative;
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        z-index: 100;
+        cursor: pointer;
+
+        &__span {
+            position: relative;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: #fff;
+                display: inline-block;
+                transition: all .4s;
+                
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                
+            }
+
+            &::before {
+                top: -1rem;
+            }
+
+            &::after {
+                top: 1rem;
+            }
+        }
+    }
+
+    // ---------------- END OF CHECKBOX -----------------
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__svg {
+            width: 16rem;
+
+            @media only screen and (max-width: $bp-large) {
+                width: 12rem;
+            }
+
+            &__logo {
+
+                &__pic {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__list {
+            flex: 0 0 20%;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            z-index: 2;
+            position: relative;
+            color: #fff;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
+        }
+
+        &__item {
+            
+            font-size: 1.25rem;
+            padding: 1.5rem 3.5rem;
+            white-space: nowrap;
+            
+            &:last-child{
+                background-color: $red-dark-3;
+                color: #fff;
+            }
+
+            &__link {
+                font-family: 'Nunito', sans-serif;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: inherit;
+            }
+        }
+    }
+}

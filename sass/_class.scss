@@ -1,0 +1,28 @@
+.active-1 {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style: none;
+    width: 90%;
+    height: 100vh;
+    color: #fff;
+    background-color: $gray-dark-1;
+    padding-top: 2rem;
+    z-index: 2;
+}
+
+.color-1 {
+    background-color: $gray-dark-1;
+}
+
+.border-shadow {
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #888888;
+}
+
+.hidden {
+    display: none;
+}
