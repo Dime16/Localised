@@ -1,3 +1,9 @@
+.wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .active-1 {
     display: block;
     position: absolute;
@@ -26,3 +32,12 @@
 .hidden {
     display: none;
 }
+
+.sticky {
+
+}
+
+// .starting {
+//     visibility: visible;
+//     opacity: 1;
+// }

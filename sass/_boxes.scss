@@ -1,0 +1,43 @@
+.boxes {
+
+    &__container {
+        display: flex;
+
+        &__1 {
+            flex: 0 0 25%;
+            border-top: 1px solid $gray-dark-1;
+            padding: 7rem;
+
+            &:not(:last-child) {
+                border-right: 1px solid $gray-dark-1;
+            }
+            &__img {
+                visibility: hidden;
+                padding-bottom: 3rem;
+            }
+
+            &__2 {
+
+                &.white {
+                    color: #fff !important;
+                }
+
+                &__header {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 2.2rem;
+                    padding-bottom: 3rem;
+                    line-height: 1.6;
+                    transition: .5s;
+                }
+
+                &__text {
+                    visibility: hidden;
+                    font-size: 1.9rem;
+                    line-height: 1.7;
+                    color: $gray-dark-1;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+
+.content {
+    padding-bottom: 10rem;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+
+        &__left {
+            flex: 0 0 50%;
+            
+            // opacity: 0;
+
+
+            &__text {
+                font-size: 5rem;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 1s;
+                transition-delay: .33s;
+                
+
+
+                &.starting {
+                    visibility: visible;
+                    opacity: 1; 
+                }
+
+                &__red {
+                    color: $red-dark-3;
+                }
+            }
+        }
+
+        &__right {
+            flex: 0 0 50%;
+
+
+
+
+            &__text {
+                font-size: 1.9rem;
+                visibility: hidden;
+                line-height: 2.2;
+                letter-spacing: .5px;
+                padding-bottom: 4rem;
+                opacity: 0;
+                transition: all 1s;
+                transition-delay: .66s;
+
+                &.starting {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            &__btn {
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+                padding: 2rem 4rem;
+                font-family: 'Nunito', sans-serif;
+                background-image: linear-gradient(to right, $red-dark-1, $orange);
+                visibility: hidden;
+                opacity: 0;
+                transition: all 1s;
+                transition-delay: 1s;
+
+                &.starting {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

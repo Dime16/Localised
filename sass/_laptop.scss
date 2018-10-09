@@ -1,0 +1,56 @@
+.laptop {
+background-image: url("/img/laptop_background.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+    &__text {
+        background-color: #fff;
+        width: 100%;
+        flex: 0 0 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem;
+
+        &__big {
+            font-family: 'Nunito', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            width: 70%;
+            align-self: center;
+            line-height: 2;
+            padding: 4rem 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+            transition-delay: .33s;
+
+            &.starting {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        &__small {
+            align-self: center;
+            width: 70%;
+            font-size: 1.7rem;
+            line-height: 2.5;
+            padding-bottom: 4rem;
+            opacity: 0;
+            transition: .5s;
+            transition-delay: .66s;
+
+            &.starting {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -24,7 +24,7 @@ a, a:active, a:hover, a:visited {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  width: 80%; }
+  width: 70%; }
 
 .nav {
   height: 10rem;
@@ -116,9 +116,9 @@ a, a:active, a:hover, a:visited {
 
 .carousel {
   width: 100%;
-  height: 68vh;
   transform: translateY(-10rem);
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   .carousel__box {
     width: 100%;
     z-index: -10;
@@ -129,11 +129,10 @@ a, a:active, a:hover, a:visited {
     background-repeat: no-repeat; }
   .carousel__secondary {
     position: absolute;
-    width: 100%;
-    z-index: 3;
-    top: 67%;
-    left: 61%;
-    transform: translate(-39%, -33%); }
+    width: 54%;
+    top: 50%;
+    left: 77%;
+    transform: translate(-58%, -23%); }
     .carousel__secondary-2 {
       height: 67vh;
       background-size: contain;
@@ -171,6 +170,8 @@ a, a:active, a:hover, a:visited {
         margin-right: 1rem;
         margin-left: 1rem;
         font-weight: 300; }
+        .carousel__text__list__item.red {
+          color: #FE2F3F; }
         .carousel__text__list__item__1 {
           width: 3rem;
           height: 2px;
@@ -182,12 +183,9 @@ a, a:active, a:hover, a:visited {
             width: 0rem;
             height: 2px;
             background-color: #FE2F3F; }
-          .carousel__text__list__item__1 .active::before {
-            transition: all 4s;
-            display: block;
-            width: 3rem;
-            height: 2px;
-            background-color: #FE2F3F; }
+          .carousel__text__list__item__1.active::before {
+            transition: all 4.25s;
+            width: 3rem; }
     .carousel__text__btn {
       position: relative;
       padding: 2rem 3.5rem;
@@ -201,6 +199,133 @@ a, a:active, a:hover, a:visited {
       .carousel__text__btn:hover {
         background-color: #fff;
         color: #292929; }
+
+.content {
+  padding-bottom: 10rem; }
+  .content__row {
+    display: flex;
+    justify-content: center; }
+    .content__row__left {
+      flex: 0 0 50%; }
+      .content__row__left__text {
+        font-size: 5rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: .33s; }
+        .content__row__left__text.starting {
+          visibility: visible;
+          opacity: 1; }
+        .content__row__left__text__red {
+          color: #FE2F3F; }
+    .content__row__right {
+      flex: 0 0 50%; }
+      .content__row__right__text {
+        font-size: 1.9rem;
+        visibility: hidden;
+        line-height: 2.2;
+        letter-spacing: .5px;
+        padding-bottom: 4rem;
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: .66s; }
+        .content__row__right__text.starting {
+          visibility: visible;
+          opacity: 1; }
+        .content__row__right__text p {
+          margin-bottom: 2rem; }
+      .content__row__right__btn {
+        color: #fff;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        padding: 2rem 4rem;
+        font-family: 'Nunito', sans-serif;
+        background-image: linear-gradient(to right, #FF2C40, #F15B3F);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+        transition-delay: 1s; }
+        .content__row__right__btn.starting {
+          visibility: visible;
+          opacity: 1; }
+
+.boxes__container {
+  display: flex; }
+  .boxes__container__1 {
+    flex: 0 0 25%;
+    border-top: 1px solid #292929;
+    padding: 7rem; }
+    .boxes__container__1:not(:last-child) {
+      border-right: 1px solid #292929; }
+    .boxes__container__1__img {
+      visibility: hidden;
+      padding-bottom: 3rem; }
+    .boxes__container__1__2.white {
+      color: #fff !important; }
+    .boxes__container__1__2__header {
+      font-family: 'Nunito', sans-serif;
+      font-size: 2.2rem;
+      padding-bottom: 3rem;
+      line-height: 1.6;
+      transition: .5s; }
+    .boxes__container__1__2__text {
+      visibility: hidden;
+      font-size: 1.9rem;
+      line-height: 1.7;
+      color: #292929;
+      transition: .5s; }
+
+.laptop {
+  background-image: url("/img/laptop_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .laptop__text {
+    background-color: #fff;
+    width: 100%;
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem; }
+    .laptop__text__big {
+      font-family: 'Nunito', sans-serif;
+      font-size: 4.5rem;
+      font-weight: 400;
+      width: 70%;
+      align-self: center;
+      line-height: 2;
+      padding: 4rem 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s;
+      transition-delay: .33s; }
+      .laptop__text__big.starting {
+        visibility: visible;
+        opacity: 1; }
+    .laptop__text__small {
+      align-self: center;
+      width: 70%;
+      font-size: 1.7rem;
+      line-height: 2.5;
+      padding-bottom: 4rem;
+      opacity: 0;
+      transition: .5s;
+      transition-delay: .66s; }
+      .laptop__text__small.starting {
+        visibility: visible;
+        opacity: 1; }
+
+.wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .active-1 {
   display: block;

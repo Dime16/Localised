@@ -1,10 +1,9 @@
 .carousel {
     width: 100%;
-    // position: absolute;
-    // top: 0;
-    height: 68vh;
+    // height: 80vh;
     transform: translateY(-10rem);
     position: relative;
+    margin-bottom: 2rem;
     
     &__box {
         width: 100%;
@@ -18,11 +17,10 @@
 
     &__secondary {
         position: absolute;
-        width: 100%;
-        z-index: 3;
-        top: 67%;
-        left: 61%;
-        transform: translate(-39%, -33%);
+        width: 54%;
+        top: 50%;
+        left: 77%;
+        transform: translate(-58%, -23%);
 
         &-2 {
             height: 67vh;
@@ -69,6 +67,10 @@
                 margin-left: 1rem;
                 font-weight: 300;
 
+                &.red {
+                    color: $red-dark-3;
+                }
+
                 //  SUDO
 
                 &__1 {
@@ -85,14 +87,11 @@
                         background-color: $red-dark-3;
                     }
 
-                    .active {
+                    &.active {
 
                         &::before {
-                            transition: all 4s;
-                            display: block;
+                            transition: all 4.25s;
                             width: 3rem;
-                            height: 2px;
-                            background-color: $red-dark-3;
                         }
                     }
   
