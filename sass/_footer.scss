@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+
+    &__left {
+
+        &__text {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+    }
+
+    &__right{
+
+        &__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            &__item {
+                font-size: 1.8rem;
+                font-family: 'Nunito', sans-serif;
+
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+
+            &__link {
+                color: $red-dark-1;
+            }
+
+            &__img {
+                width: 60%;
+            }
+        }
+    }
+}

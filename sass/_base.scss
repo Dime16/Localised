@@ -6,8 +6,13 @@ $red-dark-3 :#FE2F3F;
 $orange: #F15B3F;
 
 $gray-dark-1: #292929;
+$gray-dark-2: #D2D2D2;
 
 $gray-light-1: #DAD9D6;
+$gray-light-2: #F8F9FB;
+$gray-light-3: #F6F9FB;
+$gray-light-4: #F6F7F9;
+
 
 
 
@@ -43,6 +48,24 @@ body {
     font-weight: 400;
 }
 
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.wrapper-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.wrapper-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
 $a-tags: 'a, a:active, a:hover, a:visited';
 $a-tags-hover: 'a:active, a:hover';
  
@@ -54,8 +77,3 @@ $a-tags-hover: 'a:active, a:hover';
 //   color: $color-blue-2;
 }
 
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}

@@ -1,0 +1,95 @@
+.market {
+    height: 80vh;
+    display: flex;
+    margin-top: 13rem;
+    margin-bottom: 13rem;    
+
+    &__left {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $gray-light-2;
+        
+
+        &__text {
+            font-family: 'Nunito', sans-serif;
+            width: 75%;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+            transition-delay: .4s;
+
+
+            &.starting {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__right {
+        flex: 0 0 50%;
+        background-color: $gray-light-2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        transform: translate(-3rem, -3rem);
+
+
+        &__container {
+            width: 80%;
+            align-self: center;
+
+            &:not(:last-child) {
+                margin-bottom: 6rem;
+            }
+
+
+        }
+
+        &__box {
+            display: flex;
+            align-items: flex-start;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+            transition-delay: .8s;
+            
+            &.starting {
+                visibility: visible;
+                opacity: 1;
+            }
+
+
+            &__2 {
+                font-family: 'Nunito', sans-serif;
+                color: $red-dark-1;
+                font-size: 3rem;
+                padding-right: 6rem;
+            }
+
+            &__inner {
+
+                &__header {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    padding-bottom: 2rem;
+    
+                }
+    
+                &__text {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+
+    }
+}

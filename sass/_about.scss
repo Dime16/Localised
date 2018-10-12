@@ -1,0 +1,121 @@
+.about {
+    background-image: url("/img/bg-office.jpg");
+}
+
+.managment {
+    margin-bottom: 15rem;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15rem;
+        margin-top: -9rem;
+
+
+
+        &__line {
+            position: relative;
+            display: block;
+            width: 2px;
+            
+           
+            &::before {
+                content: "";
+                display: block;
+                background-color: $red-dark-1;
+                height: 0;
+                width: 1px;
+            }
+
+            &.starting {
+                transform: translateY(-3rem);
+                
+                &::before {
+                    transition: all 3s;
+                    height: 26rem;
+                }
+            }
+        }
+
+        &__pin {
+            padding-bottom: 6rem;
+            padding-top: 2rem;
+
+        }
+
+        &__header {
+            font-family: 'Nunito', sans-serif;
+            font-size: 4rem;
+            width: 50%;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        &__box {
+            flex: 0 0 32%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Nunito', sans-serif;
+
+            &__img {
+                width: 100%;
+                cursor: pointer;
+            }
+
+            &__name {
+                font-size: 2rem;
+                font-weight: 900;
+                padding-top: 2.5rem;
+                border-bottom: 3px solid #fff;
+                cursor: pointer;
+                transition: .4s;
+
+                &:hover {
+                    color: $red-dark-1;
+                    border-bottom: 3px solid $red-dark-1;
+                }
+            }
+
+            &__position {
+                padding-top: 2.5rem;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $red-dark-1;
+            }
+        }
+    }
+}
+  
+
+//    ----------------------- REUSABLE SECTION ----------------------------------
+
+.reusable__about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Nunito', sans-serif;
+    padding: 3rem;
+
+    &__header {
+        font-size: 3rem;
+
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+}
+
+.formargin {
+    margin-bottom: 15rem;
+}

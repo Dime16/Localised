@@ -1,5 +1,6 @@
 
 .content {
+    margin-top: 10rem;
     padding-bottom: 10rem;
 
     &__row {
@@ -8,9 +9,6 @@
 
         &__left {
             flex: 0 0 50%;
-            
-            // opacity: 0;
-
 
             &__text {
                 font-size: 5rem;
@@ -18,6 +16,7 @@
                 opacity: 0;
                 transition: all 1s;
                 transition-delay: .33s;
+                font-family: 'Nunito', sans-serif;
                 
 
 
@@ -39,7 +38,7 @@
 
 
             &__text {
-                font-size: 1.9rem;
+                font-size: 1.7rem;
                 visibility: hidden;
                 line-height: 2.2;
                 letter-spacing: .5px;

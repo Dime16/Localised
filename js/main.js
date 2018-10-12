@@ -2,9 +2,16 @@ $(document).ready(function(){
 
     // ------------ NAV BAR --------------------
     var stickyNav = $(".nav").offset().top;
+    console.log(stickyNav);
     $(window).scroll(function(){
         if( $(window).scrollTop() > stickyNav) {
-            $(".nav").toggleClass("sticky");
+            $(".nav").addClass("sticky");
+            $(".nav__box__item__link").css({"color": "#292929"});
+            $(".nav__box__svg__logo__pic").attr("src", "/img/svg/logo-full.svg");
+        } else {
+            $(".nav").removeClass("sticky");
+            $(".nav__box__item__link").css({"color": "#fff"});
+            $(".nav__box__svg__logo__pic").attr("src", "/img/svg/logo-glyph-white.svg");
         }
     });
 
@@ -89,11 +96,11 @@ $(document).ready(function(){
               
                 var viewportTop = $(window).scrollTop();
                 var viewportBottom = viewportTop + $(window).height();
-                console.log($(window).height())
-                console.log(elementTop)
-                console.log(elementBottom)
-                console.log(viewportTop)
-                console.log(viewportBottom)
+                // console.log($(window).height())
+                // console.log(elementTop)
+                // console.log(elementBottom)
+                // console.log(viewportTop)
+                // console.log(viewportBottom)
 
                 return elementTop >= viewportTop && elementBottom <= viewportBottom;
               };
@@ -139,6 +146,78 @@ $(document).ready(function(){
                     $(".laptop__text__small").removeClass("starting");
                 }
             });
+
+            $(window).on('resize scroll', function() {
+                if ($(".animate__right__text__box__line").isFullyInViewport()) {
+                    $(".animate__right__text__box__line").addClass("starting");
+                } else {
+                    $(".animate__right__text__box__line").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".animate__right__text__big").isFullyInViewport()) {
+                    $(".animate__right__text__big").addClass("starting");
+                } else {
+                    $(".animate__right__text__big").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".animate__right__text__small").isFullyInViewport()) {
+                    $(".animate__right__text__small").addClass("starting");
+                } else {
+                    $(".animate__right__text__small").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".animate__right__text__box__icon").isFullyInViewport()) {
+                    $(".animate__right__text__box__icon").addClass("starting");
+                } else {
+                    $(".animate__right__text__box__icon").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".market__left__text").isFullyInViewport()) {
+                    $(".market__left__text").addClass("starting");
+                } else {
+                    $(".market__left__text").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".market__right__box").isFullyInViewport()) {
+                    $(".market__right__box").addClass("starting");
+                } else {
+                    $(".market__right__box").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".global__box__header").isFullyInViewport()) {
+                    $(".global__box__header").addClass("starting");
+                } else {
+                    $(".global__box__header").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".global__box__buttons").isFullyInViewport()) {
+                    $(".global__box__buttons").addClass("starting");
+                } else {
+                    $(".global__box__buttons").removeClass("starting");
+                }
+            });
+
+            $(window).on('resize scroll', function() {
+                if ($(".reusable__imgright").isFullyInViewport()) {
+                    $(".reusable__imgright").addClass("starting");
+                } else {
+                    $(".reusable__imgright").removeClass("starting");
+                }
+            });
             //  ------------ CHANGING THE BACKGROUND IMAGES OF BOXES ------------------
 
 
@@ -161,13 +240,51 @@ $(document).ready(function(){
                 $(this).addClass("white");
                 $(this).children("p").css({"color" : "#fff", "visibility": "visible" });
 
-            })
+            });
 
             $(".boxes__container__1__2").mouseleave (function () {
                 $(this).removeClass("white");
                 $(this).children("p").css({"color" : "#292929", "visibility": "visible" });
 
-            })
- 
+            });
+
+
+        //  ------------- IMAGE SCROLL ----------------------
+            var z = 20;
+        $(".animate__left__arrowbot").unbind("click").on("click", function(){
+            if (z >= 0 && z <= 180) {
+                z = z + 20;
+                if(z <= 200 ) {
+                $(".animate__left__box__img__full").css({
+                    "transform": `translateY(-${z}rem)`
+                })
+            } else if (z > 200) { z = z + 0}
+
+            }
+
+        })
+
+        $(".animate__left__arrowtop").unbind("click").on("click", function(){
+            if (z >= 20 && z <= 200) {
+                    z = z - 20;
+                if(z >= 0 ) {
+                    $(".animate__left__box__img__full").css({
+                        "transform": `translateY(-${z}rem)`
+                    });
+                }
+            }
+        });
+
+
+        // ----------------- BUTTON IMAGE CHANGE -------------------
+          
+        $(".animate__right__text__buttons__btn-1").on("click", function(){
+            $(".animate__left__box__img__full").attr("src", "/img/window-image.jpg");
+        });
+
+        $(".animate__right__text__buttons__btn-2").on("click", function(){
+            $(".animate__left__box__img__full").attr("src", "/img/window-image-2.jpg");
+        });
+
 
 });
