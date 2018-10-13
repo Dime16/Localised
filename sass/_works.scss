@@ -24,6 +24,10 @@
             font-weight: 600;
             line-height: 2;
             padding-bottom: 3rem;
+
+            @media only screen and (max-width: $bp-large) {
+                width: 80%
+            }
         }
 
         &__text {
@@ -32,6 +36,10 @@
             text-align: center;
             font-size: 1.6rem;
             line-height: 1.8;
+
+            @media only screen and (max-width: $bp-large) {
+                width: 80%
+            }
         }
 
         &__arrowbox {
@@ -55,6 +63,31 @@
 .stick {
     transform: translateY(-10rem);
 
+    &__dropdown {
+        display: none;
+        @media only screen and (max-width: $bp-large) {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.7rem;
+            font-weight: 700;
+            padding: 2rem 0;
+        }
+
+        & > span {
+
+            @media only screen and (max-width: $bp-large) {
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+                background-image: url("/img/menu-arrow-down.png");
+            }
+
+        }
+    }
+
     &.sticky {
         position: absolute;
         top: 20rem;
@@ -72,6 +105,17 @@
         justify-content: space-between;
         align-items: flex-start;
 
+        @media only screen and (max-width: $bp-large) {
+            display: none;
+        }
+
+        &.active {
+            @media only screen and (max-width: $bp-large) {
+                display: block;
+            }
+        }
+
+
         &__item {
             flex: 0 0 18%;
             padding: 6rem 0;
@@ -80,6 +124,13 @@
             cursor: pointer;
             border-top: 3px solid #fff;
             transition: all .2s;
+
+            @media only screen and (max-width: $bp-large) {
+                padding: 1rem;
+                text-align: left;
+            }
+
+    
 
             &:hover {
                 color: $red-dark-1;
@@ -101,8 +152,23 @@
     justify-content: center;
     margin-bottom: 10rem;
 
+    @media only screen and (max-width: $bp-large) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    &.reverse {
+        @media only screen and (max-width: $bp-large) {
+            flex-direction: column;
+        }
+    }
+
     &__textleft {
         flex: 0 0 45%;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 100%;
+        }
 
         &__full {
             
@@ -161,13 +227,24 @@
         opacity: 0;
         transition: all .7s;
 
+        @media only screen and (max-width: $bp-large) {
+            transform: none;
+        }
+
         &.starting {
             transform: translateY(-3rem);
             opacity: 1;
+
+            @media only screen and (max-width: $bp-large) {
+                transform: none;
+            }
         }
 
         &__img {
-
+            width: 100%;
+            @media only screen and (max-width: $bp-large) {
+                width: 100%;
+            }
         }
     }
 }
@@ -185,6 +262,10 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 55vh;
+
+    @media only screen and (max-width: $bp-large) {
+        height: 90vh;
+    }
     }
 
     &__title {
@@ -192,12 +273,23 @@
         font-family: 'Nunito', sans-serif;
         font-size: 3rem;
         margin-top: 15rem;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 90vh;
+        }
+
+
 
     }
 
     &__box {
         background-color: $gray-light-4;
         height: 35vh;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 80vh;
+        }
 
 
         &__table {
@@ -211,12 +303,23 @@
             box-shadow: 5px 10px 10px 4px $gray-dark-2;
             height: 58rem;
 
+            @media only screen and (max-width: $bp-large) {
+                flex-direction: column;
+                box-shadow: none;
+            }
+
+
+
             &__names {
                 flex: 0 0 25%;
                 background-color: $gray-light-3;
                 padding: 3rem 2rem;
                 font-family: 'Nunito', sans-serif;
                 padding-top: 7rem;
+
+                @media only screen and (max-width: $bp-large) {
+                    display: none;
+                }
 
 
                 &__tr {
@@ -245,6 +348,32 @@
                 padding-top: 7rem;
                 transition: all .3s;
 
+                @media only screen and (max-width: $bp-large) {
+                    width: 100%;
+                    text-align: left;
+                    padding: 1rem 1.5rem;
+                    border-bottom: 4px solid $gray-dark-2;
+                }
+
+                &__dropdown {
+                    width: 100%;
+                    display: block;
+                    background-image: url("/img/silver+.png");
+                    width: 5rem;
+                    height: 5rem;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+
+                &__plus {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+
                 &__tr {
                     font-size: 1.3rem;
                     font-weight: 700;
@@ -265,6 +394,12 @@
                     height: 62rem;
                     transform: translateY(-2rem);
                     z-index: 5;
+
+                    @media only screen and (max-width: $bp-large) {
+                        box-shadow: none;
+                        transform: none;
+                        height: auto;
+                    }
                 }
             }
 

@@ -1,32 +1,76 @@
 .carousel {
     width: 100%;
-    // height: 80vh;
+    height: 90vh;
     transform: translateY(-10rem);
     position: relative;
     margin-bottom: 2rem;
+
     
     &__box {
         width: 100%;
         z-index: -10;
         display: relative;
-        height: 68vh;
+        height: 70vh;
         background-size: cover;
         background-position: unset;
         background-repeat: no-repeat;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 85vh;
+        }
+
+        
+        @media only screen and (max-width: $bp-large) {
+            height: 75vh;
+        }
     }
 
     &__secondary {
         position: absolute;
-        width: 54%;
-        top: 55%;
+        width: 50%;
+        top: 60%;
         left: 77%;
-        transform: translate(-58%, -23%);
+        transform: translate(-58%, -32%);
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            
+        }
 
         &-2 {
-            height: 67vh;
+            height: 90vh;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+
+            @media only screen and (max-width: $bp-large) {
+                width: 70rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 100%;
+                background-size: 135%;
+                height: 70vh;
+            }
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%, -10%);
+            width: 60%;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            height: 50rem;
+            width: 50rem;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -10%);
+            width: 60%;
         }
     }
 
@@ -39,8 +83,24 @@
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        left: 18rem;
-        top: 3rem;
+        left: 12rem;
+        top: 15rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 90%;
+            transform: translateY(-3rem);
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            width: 70%;
+            transform: translateY(-5rem);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         &__header {
         color: $gray-light-1;
@@ -49,6 +109,12 @@
         padding-bottom: 3rem;
         letter-spacing: 1px;
         font-weight: 600;
+
+        
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+        }
+
         }
 
         &__list {
@@ -58,6 +124,15 @@
             display: flex;
             align-items: center;
             padding-bottom: 3rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                
+
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                
+            }
 
             &__item {
                 font-size: 1.5rem;
@@ -71,6 +146,21 @@
                     color: $red-dark-3;
                 }
 
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 2rem;
+                    margin-right: 1.6rem;
+                    padding-bottom: 2rem;
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                
+
+                }
+    
+                @media only screen and (max-width: $bp-small) {
+                    
+                }
+
                 //  SUDO
 
                 &__1 {
@@ -78,6 +168,19 @@
                     height: 2px; 
                     display: block;
                     background-color: #fff;
+
+                    @media only screen and (max-width: $bp-largest) {
+                        height: 1px;
+                    }
+
+                    @media only screen and (max-width: $bp-medium) {
+                        width: 4rem;
+
+                    }
+        
+                    @media only screen and (max-width: $bp-small) {
+                        
+                    }
 
                     &::before {
                         content: "";
@@ -109,6 +212,10 @@
             letter-spacing: 1px;
             font-family: 'Nunito', sans-serif;
             transition: .3s;
+
+            @media only screen and (max-width: $bp-large) {
+                display: none;
+            }
 
             &:hover {
                 background-color: #fff;

@@ -8,12 +8,19 @@
     position: relative;
     z-index: 5;
     transition: all .7s;
+
+    @media only screen and (max-width: $bp-smaller) {
+        padding: 0 2rem;
+        width: 100%;
+    }
     
     &.sticky {
+        position: relative;
         width: 100%;
         position: fixed;
         background-color: #fff;
         color: $gray-dark-1;
+        z-index: 100;
         
     }
 
@@ -24,6 +31,8 @@
         
         @media only screen and (max-width: $bp-medium) {
             display: block;
+            position: relative;
+            z-index: 100000;
         }
     }
 
@@ -98,6 +107,8 @@
 
         &__svg {
             width: 16rem;
+            position: relative;
+            z-index: 100000;
 
             @media only screen and (max-width: $bp-large) {
                 width: 12rem;
@@ -119,6 +130,22 @@
             z-index: 2;
             position: relative;
             color: #fff;
+
+            &.active-1 {
+                display: block;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                list-style: none;
+                width: 100%;
+                height: 200vh;
+                color: #fff;
+                background-color: $gray-dark-1;
+                padding-top: 2rem;
+                z-index: 10000;
+            }
 
             @media only screen and (max-width: $bp-medium) {
                 display: none;

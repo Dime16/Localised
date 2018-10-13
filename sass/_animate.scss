@@ -4,6 +4,19 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: $bp-largest) {
+       flex-direction: column;
+    }
+
+    
+    @media only screen and (max-width: $bp-large) {
+       
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+     }
+ 
+
     &__left {
             flex: 0 0 60%;
             display: flex;
@@ -82,7 +95,20 @@
     &__right {
         flex: 0 0 45%;
 
+
+        @media only screen and (max-width: $bp-largest) {
+            flex: 0 0 65%;
+            margin-top: 5rem;
+         }
+
+
         &__text {
+
+            @media only screen and (max-width: $bp-large) {
+               display: flex;
+               flex-direction: column;
+               transform: translateY(10rem);
+           }
 
             &__big {
                 width: 70%;
@@ -93,6 +119,11 @@
                 visibility: hidden;
                 opacity: 0;
                 transition: all .4s;
+
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 4rem;
+                    width: 90%;
+                 }
 
                 &.starting {
                     visibility: visible;
@@ -126,6 +157,10 @@
                     font-family: 'Nunito', sans-serif;
                     font-size: 2.2rem;
                     margin-right: 2rem;
+
+                    @media only screen and (max-width: $bp-largest) {
+                        font-size: 3rem;
+                     }
                 }
 
                 &__icon {
@@ -150,6 +185,10 @@
                     width: 60%;
                     background-color: $red-dark-1;
 
+                    @media only screen and (max-width: $bp-largest) {
+                        display: none;
+                     }
+
                     &::after {
                         content: "";
                         display: block;
@@ -157,6 +196,10 @@
                         width: 60%;
                         background-color: #fff;
                         transition: all 1.8s;
+
+                        @media only screen and (max-width: $bp-largest) {
+                            display: none;
+                         }
                     }
 
                     &.starting {
@@ -175,10 +218,22 @@
                 font-weight: 700;
                 padding-bottom: 3rem;
 
+                @media only screen and (max-width: $bp-large) {
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 2.2rem;
+                }
+
             }
 
             &__buttons {
                 display: flex;
+
+                @media only screen and (max-width: $bp-large) {
+                    justify-self: center;
+                    align-self: center;
+                    
+               }
                 
                 &__btn-1 {                 
                     width: 7rem;
@@ -188,6 +243,11 @@
                     background-color: $gray-dark-1;
                     color: #fff;
                     font-weight: 500;
+
+                    @media only screen and (max-width: $bp-large) {
+                        width: 10rem;
+                        height: 7rem;
+                   }
                 }
 
                 
@@ -199,6 +259,11 @@
                     background-color: #fff;
                     color: $gray-dark-1;
                     font-weight: 500;
+
+                    @media only screen and (max-width: $bp-large) {
+                        width: 10rem;
+                        height: 7rem;
+                   }
                 }
             }
         }

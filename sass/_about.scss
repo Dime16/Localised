@@ -57,12 +57,20 @@
         display: flex;
         justify-content: space-between;
 
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+         }
+
         &__box {
             flex: 0 0 32%;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Nunito', sans-serif;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 2rem;
+             }
 
             &__img {
                 width: 100%;

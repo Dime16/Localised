@@ -1,0 +1,128 @@
+.contact {
+    background-image: url("/img/bg-manhattan.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__header {
+        color: #fff;
+        font-size: 3rem;
+        font-family: 'Nunito', sans-serif;
+        transform: translateY(-10rem);
+        padding-bottom: 2rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        
+
+        &.starting {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        transition-delay: .4s;
+        
+
+        &.starting {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        &__box {
+            flex: 0 0 30%;
+            text-align: center;
+
+            &__header {
+                color: #fff;
+                font-family: 'Nunito', sans-serif;
+                font-size: 2rem;
+                padding-bottom: 3rem;
+            }
+
+            &__tel {
+                color: $red-dark-1;
+                padding-bottom: 3rem;
+                font-size: 1.6rem;
+                cursor: pointer;
+                font-weight: 400;
+            }
+
+            &__mail {
+                color: $red-dark-1;
+                font-size: 1.6rem;
+                cursor: pointer;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+
+
+    &__header {
+        align-self: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+         }
+
+        &__box {
+            flex: 0 0 32%;
+            text-align: center;
+            border: 1px solid $gray-dark-2;
+            margin-bottom: 2rem;
+            padding: 10rem 5rem;
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+
+           @media only screen and (max-width: $bp-large) {
+            flex: 0 0 45%;
+         }
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &__city {
+                font-family: 'Nunito', sans-serif;
+                font-size: 4.5rem;
+                font-weight: 900;
+                padding-bottom: 2rem;
+
+            }
+
+            &__pin {
+                padding-bottom: 3rem;
+
+            }
+
+            &__info {
+                font-size: 1.6rem;
+                line-height: 1.8;
+                color: #fff;
+            }
+        }
+    }
+}

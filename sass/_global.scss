@@ -6,9 +6,20 @@
     align-items: center;
     margin-bottom: 20rem;
 
+    
+    @media only screen and (max-width: $bp-large) {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: 100vh;
+    }
+
     &__box {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
 
         &__header {
@@ -20,6 +31,10 @@
             opacity: 0;
             transition: .5s;
             transition-delay: .4s;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: center;
+            }
 
             &.starting {
                 opacity: 1;

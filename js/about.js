@@ -75,5 +75,14 @@ $(document).ready(function() {
             }
         });
 
+
+
+        // -------------------- Scroll Down Anchor -------------------------
+
+        $(".bg__box__arrowbox").on("click", function (){
+            $("html, body").animate({
+                scrollTop: $(".managment__bottom").offset().top - $(".nav").outerHeight() -100 }, "slow");
+        });
+
         
 });

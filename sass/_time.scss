@@ -1,6 +1,10 @@
 .time {
     width: 100%;
 
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+
     &__logo {
         width: 15rem;
         margin-left: auto;
@@ -19,6 +23,10 @@
         border-bottom: 2px solid $gray-dark-2;
         padding: 0 5rem;
         padding-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-wrap: wrap;
+        }
     }
 
     &__box {
@@ -27,6 +35,11 @@
         justify-content: center;
         align-items: center;
         position: relative;
+
+        @media only screen and (max-width: $bp-large) {
+            flex: 0 0 33%;
+            padding-bottom: 4rem;
+        }
 
         &__clock {
             position: relative;

@@ -2,22 +2,28 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .active-1 {
-    display: block;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    list-style: none;
-    width: 90%;
-    height: 100vh;
-    color: #fff;
-    background-color: $gray-dark-1;
-    padding-top: 2rem;
-    z-index: 2;
+    // display: block;
+    // position: absolute;
+    // top: 60%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // text-align: center;
+    // list-style: none;
+    // width: 100%;
+    // height: 200vh;
+    // color: #fff;
+    // background-color: $gray-dark-1;
+    // padding-top: 2rem;
+    
 }
 
 .color-1 {

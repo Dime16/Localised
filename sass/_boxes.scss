@@ -1,16 +1,44 @@
 .boxes {
 
+    
+    @media only screen and (max-width: $bp-large) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &__container {
         display: flex;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-wrap: wrap;
+        }
 
         &__1 {
             flex: 0 0 25%;
             border-top: 1px solid $gray-dark-1;
             padding: 6rem;
 
+
             &:not(:last-child) {
                 border-right: 1px solid $gray-dark-1;
+
+                @media only screen and (max-width: $bp-large) {
+                    
+                    border-right: none;
+                }
             }
+
+            @media only screen and (max-width: $bp-large) {
+                flex: 0 0 50%;
+                border: none;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                flex: 0 0 90%;
+                border-bottom: 1px solid $gray-dark-2;
+            }
+            
             &__img {
                 visibility: hidden;
                 padding-bottom: 3rem;

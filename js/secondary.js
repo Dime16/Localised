@@ -118,4 +118,14 @@ $(document).ready(function() {
         });
 
 
+        //  --------------------------- STICKY MENY ON CLICK ---------------------------
+
+        $(".stick__dropdown").on("click", function () {
+            $(".stick__box").toggleClass("active");
+        });
+
+        $(".feature__box__table__bronze__dropdown").on("click", function () {
+            $(this).siblings(".feature__box__table__bronze__plus").toggleClass("active");
+        });
+
 });

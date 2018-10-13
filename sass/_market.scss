@@ -4,12 +4,39 @@
     margin-top: 13rem;
     margin-bottom: 13rem;    
 
+    @media only screen and (max-width: $bp-largest) {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+     }
+
+     @media only screen and (max-width: $bp-large) {
+        flex-direction: column;
+        height: 150vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        height: 100vh;
+   
+    }
     &__left {
         flex: 0 0 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid $gray-light-2;
+
+        @media only screen and (max-width: $bp-large) {
+            text-align: center;
+            flex: 0 0 60%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 0 0 40%;
+            justify-content: flex-start;
+        }
         
 
         &__text {
@@ -23,6 +50,10 @@
             opacity: 0;
             transition: .5s;
             transition-delay: .4s;
+
+            @media only screen and (max-width: $bp-medium) {
+                text-align: left;
+            }
 
 
             &.starting {
@@ -41,10 +72,26 @@
         justify-content: center;
         transform: translate(-3rem, -3rem);
 
+        @media only screen and (max-width: $bp-large) {
+            transform: translate(0rem, -3rem);
+            flex: 0 0 50%;
+            padding: 7rem 0;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            transform: translate(0rem, -3rem);
+            flex: 0 0 45%;
+            padding: 2rem 0;
+        }
+
 
         &__container {
             width: 80%;
             align-self: center;
+
+            @media only screen and (max-width: $bp-large) {
+                height: 90vh;
+            }
 
             &:not(:last-child) {
                 margin-bottom: 6rem;
